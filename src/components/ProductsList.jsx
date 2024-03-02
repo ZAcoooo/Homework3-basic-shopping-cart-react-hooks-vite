@@ -1,14 +1,14 @@
 import PropTypes from "prop-types";
-
+import React from "react";
 import Product from "./Product";
 
-export default function ProductsList({ products, onAddCart }) {
+export default function ProductsList({ products, onAddProductToBuy, onRemoveProduct }) {
   return (
     <>
       <h2>Products</h2>
       <div className="products row">
         {products.map((p, i) => (
-          <Product key={i} product={p} onAddCard={onAddCart}></Product>
+          <Product key={i} product={p} onAddProductToBuy={onAddProductToBuy} onRemoveProduct={onRemoveProduct}></Product>
         ))}
       </div>
     </>
@@ -17,5 +17,6 @@ export default function ProductsList({ products, onAddCart }) {
 
 ProductsList.propTypes = {
   products: PropTypes.array.isRequired,
-  onAddCart: PropTypes.func.isRequired,
+  onAddProductToBuy: PropTypes.func.isRequired,
+  onRemoveProduct: PropTypes.func.isRequired,
 };

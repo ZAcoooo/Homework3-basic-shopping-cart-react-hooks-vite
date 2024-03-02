@@ -92,7 +92,6 @@ export default function App() {
     const getProductsToBuy = async () => {
       const productsToBuy = await myFirebase.getProductsToBuy();
       setProductsToBuy(productsToBuy);
-      console.log(productsToBuy);
     };
     getProductsToBuy();
   }, []);

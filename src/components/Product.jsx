@@ -9,7 +9,7 @@ export default function Product({ product, onAddProductToBuy, onRemoveProduct })
     onRemoveProduct(product.id);
   };
   return (
-    <div className="col-4">
+    <div className="col-3 mb-2">
       <div className="card ">
         <img src={product.image} alt={product.name} />
         {product.name} ${product.price}

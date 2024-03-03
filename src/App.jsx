@@ -79,10 +79,6 @@ export default function App() {
     setProductsToBuy(productsToBuy.filter((productToBuy) => productToBuy.id !== productToBuyId));
   };
 
-  // const onRemoveProductToBuy = (productToBuyId) => {
-  //   setProductsToBuy(productsToBuy.filter((productToBuy) => productToBuy.id !== productToBuyId));
-  // };
-
   useEffect( () => {
     const getProducts = async () => {
       const products = await myFirebase.getProducts();
